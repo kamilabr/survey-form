@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans&display=swap" rel="stylesheet">
+    <!--Custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Order Checkout</title>
+  </head>
+
+  <body>
+    <div>
+      <h1 id="title">Your Order</h1>
+      <p id="description" >Check your address and select a payment method.</p>
+      
+<form id="survey-form">
+
+   
+  
+      <h2>Address</h2>
+
+      
+      
+        <fieldset>
+        <label for="name" id="name-label">Name: </label><input type="text" id="name" placeholder="Martha Jones" required />
+        <label for="street">Street: </label><input type="text" id="street" placeholder="Cherry Blvd." required />
+        <label for="house-number" id="number-label">House No.: </label><input type="number" id="number" placeholder="5" min="1" max="20" required />
+
+        <label for="city">City: </label><input type="text" id="city" placeholder="Seattle" required />
+        <label for="postal-code">Postal Code: </label><input type="number" id="postal-code" placeholder="98101" required />
+
+        <label for="dropdown">Country:</label>
+
+<select name="country" id="dropdown">
+    <option value="">--Please choose an option--</option>
+    <option value="usa" selected>USA</option>
+    <option value="canada">Canada</option>
+    <option value="mexico">Mexico</option>
+    <option value="cuba">Cuba</option>   
+</select> 
+</fieldset>
+<fieldset>
+ <label for="email" id="email-label">Your email: </label><input type="email" id="email" placeholder="martha@jones.com" required />
+</fieldset>
+<fieldset>
+ <label for="delivery-instructions">Additional delivery instructions: <textarea id="delivery-instructions" rows="4" cols="20" ></textarea></label>
+</fieldset>
+
+      
+    </div>
+
+    <div>
+      <h2>Shipping Method</h2>
+      <p>Choose a delivery option.</p>
+      
+      <fieldset>
+        <span><input type="radio" id="fedex" name="shipping" value="fedex">
+        <label for="fedex">Fedex</label></span>
+        <span><input type="radio" id="dhl" name="shipping" value="dhl">
+        <label for="dhl">DHL</label></span>
+        
+        </fieldset>
+      <h2>Payment Method</h2>
+      <p>Complete your purchase by selecting a preferred payment method.</p>
+      
+      <fieldset>
+        <span><input type="radio" id="paypal" name="payment" value="paypal">
+        <label for="paypal">Paypal</label></span>
+        <span><input type="radio" id="klarna" name="payment" value="klarna">
+        <label for="klarna">Klarna</label></span>
+        <span><input type="radio" id="credit-card" name="payment" value="credit-card">
+        <label for="credit-card">Credit Card</label></span>
+      </fieldset>
+        
+      <fieldset>
+        <input type="checkbox" id="terms-conditions" name="terms-conditions" value="terms-conditions">
+        <label for="terms-conditions">I have read and agreed to your <a href="">Terms and Conditions</a>*</label>
+        <br>
+        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+        <label for="newsletter">I would like to receive your newsletter</label>
+      </fieldset>
+
+<fieldset>
+        <input type="submit" id="submit" value="Proceed to Payment" />
+</fieldset>
+</div>
+      </form>
+
+
+    
+
+  </body>
+</html>
